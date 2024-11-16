@@ -11,16 +11,16 @@ body {
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  gap: 40px; /* Увеличен зазор между карточками */
+  gap: 40px; 
   padding: 20px;
 }
 
 .form-container {
   background: #fff;
   border-radius: 12px;
-  padding: 20px 30px; /* Добавлены отступы */
-  width: 400px; /* Фиксированная ширина для эстетики */
-  max-width: 90%; /* Для маленьких экранов */
+  padding: 20px 30px; 
+  width: 400px; 
+  max-width: 90%;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
@@ -30,22 +30,33 @@ body {
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
 }
 
+.profile-container {
+  width: 400px; 
+  height: 480px; 
+}
+
 h2 {
   margin-bottom: 20px;
-  font-size: 24px; /* Увеличен размер заголовков */
-  text-align: center; /* Выравнивание по центру */
+  font-size: 24px; 
+  text-align: center; 
 }
 
 .form {
   display: flex;
   flex-direction: column;
-  gap: 15px; /* Увеличен промежуток между элементами */
+  gap: 15px; 
 }
 
 .row {
   display: flex;
   gap: 15px;
 }
+
+.gender-row {
+  display: flex;
+  gap: 15px;
+}
+
 
 input,
 select,
@@ -54,7 +65,7 @@ button {
   padding: 10px 12px;
   border: 1px solid #ccc;
   border-radius: 8px;
-  font-size: 14px; /* Сделано больше для читаемости */
+  font-size: 14px; 
 }
 
 button {
@@ -76,17 +87,24 @@ button:hover {
 }
 
 .image-placeholder {
-  width: 50px;
-  height: 50px;
-  background: #e9ecef;
-  border-radius: 50%;
+  width: 140px; 
+  height: 50px; 
+  background: #e9ecef; 
+  border-radius: 50%; 
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 24px;
-  color: #6c757d;
+  font-size: 24px; 
+  color: #6c757d; 
   font-weight: bold;
-  overflow: hidden;
+  cursor: pointer;
+  overflow: hidden; 
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);  
+  transition: transform 0.3s ease; 
+}
+
+.image-placeholder:hover {
+  transform: scale(1.1); 
 }
 
 .image-placeholder img {
@@ -97,13 +115,49 @@ button:hover {
 
 .error {
   border-color: red;
+  border: 2px solid red;
+
 }
 
 .terms,
 .login {
-  font-size: 12px;
+  font-size: 10px;
   color: #6c757d;
   text-align: center;
+}
+
+.profile-email {
+  border-radius: 8px;
+  padding: 10px;
+  font-size: 14px;
+}
+
+.profile-country {
+  border-radius: 8px;
+  padding: 10px;
+  font-size: 14px;
+}
+
+.profile-city {
+  border-radius: 8px;
+  padding: 10px;
+  font-size: 14px;
+  width: 90%;
+}
+
+.create-email {
+  width: 94%; 
+  margin: 0 auto; 
+  border-radius: 8px;
+  padding: 10px;
+  font-size: 14px;
+}
+
+.profile-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; 
+  border-radius: 50%;
 }
 
 @media (max-width: 768px) {
@@ -113,6 +167,19 @@ button:hover {
   }
 
   .form-container {
-    width: 90%; /* Растянуть карточки на маленьких экранах */
+    width: 90%; 
   }
+
+  .profile-container {
+    width: 100%; 
+    height: auto;
+  }
+ 
+    .create-email {
+      width: 96%; 
+    }
+  
+
 }
+
+
